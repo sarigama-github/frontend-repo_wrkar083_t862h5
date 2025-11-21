@@ -1,0 +1,5 @@
+Place your video files here:
+- telegram-demo.mp4
+- streamlit-demo.mp4
+
+Update the sources in src/components/VideoSection.jsx if you use different filenames.

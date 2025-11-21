@@ -1,71 +1,47 @@
+import Hero from './components/Hero'
+import VideoSection from './components/VideoSection'
+import About from './components/About'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+    <div className="min-h-screen bg-slate-900 text-slate-100">
+      {/* Background accents */}
+      <div className="pointer-events-none fixed inset-0 -z-0">
+        <div className="absolute left-1/2 top-[-10rem] h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15),transparent_60%)]"/>
+      </div>
 
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
+      {/* Hero with Spline */}
+      <Hero />
 
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
+      {/* Content wrapper */}
+      <main className="relative">
+        {/* Markdown-like section title */}
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-6 text-left">
+            <p className="text-xs font-mono text-blue-300/70"># demos</p>
+            <h2 className="mt-1 text-2xl font-semibold text-white">Demostraciones del sistema</h2>
+            <p className="mt-1 text-sm text-blue-100/70">Evidencia visual y funcional de la IA en dos canales principales.</p>
           </div>
         </div>
-      </div>
+
+        {/* Videos */}
+        <VideoSection />
+
+        {/* About / bullets */}
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-4 text-left">
+            <p className="text-xs font-mono text-blue-300/70"># acerca</p>
+          </div>
+        </div>
+        <About />
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 bg-slate-900/60 py-8">
+        <div className="mx-auto max-w-6xl px-6 text-sm text-blue-200/60">
+          <p>Proyecto de presentación — enfoque minimalista, profesional y tecnológico.</p>
+        </div>
+      </footer>
     </div>
   )
 }
